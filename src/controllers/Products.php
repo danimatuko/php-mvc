@@ -2,7 +2,7 @@
 
 class Products
 {
-	public  function index()
+	public function index()
 	{
 		require "./src/models/Product.php";
 		$model = new Product();
@@ -11,5 +11,10 @@ class Products
 		if (!empty($products)) {
 			require "./src/views/products.php";
 		}
+	}
+
+	public function show()
+	{
+		require "./src/views/products-show.php";
 	}
 }

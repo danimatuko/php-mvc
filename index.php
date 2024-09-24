@@ -1,7 +1,10 @@
 <?php
 
-require 'src/controllers/Products.php';
+$controller =  ucfirst($_GET['controller']);
+$action = $_GET['action'];
 
-$products = new Products();
+require "src/controllers/$controller.php";
 
-$products->index();
+$controller = new $controller;
+
+$controller->$action();
