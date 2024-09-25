@@ -9,7 +9,7 @@ RUN a2enmod rewrite
 
 # Allow .htaccess overrides by modifying the Apache config
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
-
+f
 # Set the working directory in the container
 WORKDIR /var/www/html
 
